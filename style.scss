@@ -1,0 +1,66 @@
+$colors:(
+    dark:black,
+    chitta:white,
+    success:rgb(52, 201, 52),
+);
+@function colors($color)
+{
+    @return map-get($map: $colors, $key:color );
+}
+$fontSize:(
+    ten:10px,
+    twenty:20px,
+    thirty:30px,
+    fourty:40px,
+    fifty:50px,
+    sixty:60px,
+);
+@function fontSize($Size){
+      @return map-get($map: $fontSize, $key:$Size );
+}
+$textAlignment:(
+    c:center,
+    l:left,
+    r:right,
+    j:justify,
+);
+@function textAlignment($txtalign){
+    @return map-get($map: $textAlignment, $key:$txtalign);
+}
+$fontStyle:(
+    curs:'Great Vibes'+ cursive,
+    serif:sans-serif,
+);
+@function fontStyle($style){
+    @return map-get($map: $fontStyle, $key: $style );
+}
+
+//nesting
+     
+    body{
+    background-image: url("images/body-of-water-across-sunset-1076429.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    p{
+        font-family: fontStyle(curs);
+        font-size: fontSize(fourty);
+        text-align: textAlignment(c);
+        
+        }
+          #img{
+                position: absolute;
+           }  
+            h3{
+                font-family: fontStyle(curs);
+                text-align: textAlignment(c);
+                font-size: fontSize(thirty);
+                color: colors(success);
+             }
+                h1 {
+                    font-family: fontStyle(curs);
+                    font-size: fontSize(thirty);
+                    text-align: textAlignment(c);
+                    color: colors(chita);
+                    }
+    }

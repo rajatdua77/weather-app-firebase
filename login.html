@@ -11,26 +11,47 @@
      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+       <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+  
 <body>
     <header class="text-center p-4 bg-dark text-white h2">Login form</header>
-       <div class="container mt-2">
+       <div class="container mt-2" id="login">
           
            <div class="form-group">
                <label for="email">Email</label>
-               <input type="email" class="form-control"  placeholder="Enter Email" required>
+               <input type="email" id="email" class="form-control"  placeholder="Enter Email" required>
             </div> 
             <div class="form-group">
                <label for="password">Password</label>
-               <input type="password" class="form-control" placeholder="Enter Password" required> <br>
+               <input type="password" id="pass" class="form-control" placeholder="Enter Password" required> <br>
 
-               <input type="Submit" class="btn btn-success btn-sm btn-block"></input> <br>
+               <input type="Submit" onclick="login()" class="btn btn-success btn-sm btn-block"></input> <br>
                <h5 class="text-center text-dark">-------------or-------------</h5>
               <center>   <a href="registration.html" class="text-danger">Create a new Account</a>  </center>
 
             </div>
-
-            
-           
+                      
        </div>
+       
+
+     <script>
+                // Your web app's Firebase configuration
+                var firebaseConfig = {
+                  apiKey: "AIzaSyDz18hHzwZAs9vLOl8BDh1spqlYoOPDCIo",
+                  authDomain: "weather-app-94596.firebaseapp.com",
+                  databaseURL: "https://weather-app-94596.firebaseio.com",
+                  projectId: "weather-app-94596",
+                  storageBucket: "weather-app-94596.appspot.com",
+                  messagingSenderId: "535491702893",
+                  appId: "1:535491702893:web:90a9caf35c44901f8dcf64"
+                };
+                // Initialize Firebase
+                firebase.initializeApp(firebaseConfig);
+              </script>
+              <script src="script.js"></script>
+
 </body>
 </html>
