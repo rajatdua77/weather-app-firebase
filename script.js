@@ -1,3 +1,4 @@
+// Rajat Dua
 const auth=firebase.auth();
 
 function signUp()
