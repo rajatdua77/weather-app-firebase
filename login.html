@@ -15,6 +15,10 @@
        <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+ 
+<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
   
 <body>
     <header class="text-center p-4 bg-dark text-white h2">Login form</header>
@@ -29,8 +33,17 @@
                <input type="password" id="pass" class="form-control" placeholder="Enter Password" required> <br>
 
                <input type="Submit" onclick="login()" class="btn btn-success btn-sm btn-block"></input> <br>
+                <div id="google" class="text-center">
+                  
+                </div>
                <h5 class="text-center text-dark">-------------or-------------</h5>
-              <center>   <a href="registration.html" class="text-danger">Create a new Account</a>  </center>
+               <div class="text-center">
+                 <a href="registration.html" class="text-danger">Create a new Account</a> 
+                <div id="firebaseui-auth-container">
+
+                </div>
+
+               </div>
 
             </div>
                       
@@ -50,8 +63,15 @@
                 };
                 // Initialize Firebase
                 firebase.initializeApp(firebaseConfig);
+                var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    ui.start('#firebaseui-auth-container', {
+  signInOptions: [
+  firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+  ],
+  // Other config options...
+});
               </script>
-              <script src="script.js"></script>
+              <script src="/js/login.js"></script>
 
 </body>
 </html>

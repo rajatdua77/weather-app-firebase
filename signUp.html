@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+  
+   
+    <style>
+        .signup-form{
+            border: 2px solid #e0e0e0;
+            padding: 50px;
+            justify-content: center;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 70px;
+            box-shadow: 15px 10px 10px #cccaca;
+            border-radius: 10px;
+        }
+        img{
+            height: 50vh;
+        }
+
+        @media only screen and (max-width: 600px){
+            
+            .signup-form{
+                display: block;
+               
+               
+            }
+            img{
+               display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+         <header class="text-center p-3 bg-dark h2 text-white">Registration form</header>
+         <div class="container signup-form">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-10">
+                  
+                <div class="signup">
+                   <div class="form-group">
+                       <label for="name">Name</label> <br>
+                       <input type="text" id="name" class="form-control" placeholder="Jhon Doe..." required>
+                   </div>
+                   <div class="form-group">
+                    <label for="name">Email</label> <br>
+                    <input type="text" id="email" class="form-control" placeholder="jhon@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Password</label> <br>
+                    <input type="password" id="pass" class="form-control" placeholder="*********" required>
+                </div>
+                <div class="submit-wrap">
+                    <input type="checkbox" id=""> <a href="#" class="text-primary"> Terms and conditions</a>
+                    <input type="submit" value="Sign up" onclick="signUp()" class="btn btn-outline-primary mt-2 form-control"><br>
+                    <div class="text-center">
+                            <p class="text-primary mt-3"><a href="/login.html">Login to exsiting account</a></p>
+                    </div>
+            </div>
+                                               
+                </div>
+              </div>
+              
+                <div class="col-sm-12 col-md-12 col-lg-2">
+                    <img src="images/signup.png">
+                </div>
+                   </div>
+            </div>
+            
+            <script>
+                // Your web app's Firebase configuration
+                var firebaseConfig = {
+                  apiKey: "AIzaSyDz18hHzwZAs9vLOl8BDh1spqlYoOPDCIo",
+                  authDomain: "weather-app-94596.firebaseapp.com",
+                  databaseURL: "https://weather-app-94596.firebaseio.com",
+                  projectId: "weather-app-94596",
+                  storageBucket: "weather-app-94596.appspot.com",
+                  messagingSenderId: "535491702893",
+                  appId: "1:535491702893:web:90a9caf35c44901f8dcf64"
+                };
+                // Initialize Firebase
+                firebase.initializeApp(firebaseConfig);
+              </script>
+              <script src="js/signUp.js"></script>
+              
+
+</body>
+</html>

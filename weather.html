@@ -33,7 +33,7 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//geodata.solutions/includes/countrystatecity.js"></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <h1>
@@ -79,7 +79,7 @@
       <p id="desc"></p>
     </div>
 
-    <button class="btn btn-danger">Logout=></button>
+    <button class="btn btn-danger" style="margin-left: 220px;" onclick="logout()">Logout=></button>
     <script>
       var firebaseConfig = {
         apiKey: "AIzaSyDz18hHzwZAs9vLOl8BDh1spqlYoOPDCIo",
@@ -94,6 +94,7 @@
       firebase.initializeApp(firebaseConfig);
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwh_KAK7wGukdbyudPYYc9XVkt3tI0zOI&callback=initMap"></script>
-    <script src="script.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="/js/login.js"></script>
   </body>
 </html>
